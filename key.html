@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>password</title>
+    <style>
+        body{
+            background-color: lightblue;
+            padding: 30px;  
+        }
+        #p1{
+            text-align: center;
+            font-size: 30pt;
+            text-shadow: 200px;
+        }
+        #a1{
+            text-decoration: none;
+        }
+        .i1{
+            background-color: #fff;
+            text-align: center;
+        }
+       
+        .div1{
+            background-color: aqua;
+            padding: 20px;
+            text-align: center;
+            margin-top: 10px;
+            float: center;
+            border-radius: 50px;
+            border: 2px solid #000; 
+        }
+    </style>
+</head>
+<body>
+    <p id="p1">The Monk DIAMOND DISCOVERY</p>
+
+    <div class="div1">
+        <p>Please enter the password to view the website:</p>
+        <p>Password: <input class="i1"  type="password" placeholder="type your password" id="passwordBox" required></p>
+
+        <a href="index.html" id="a1"  onclick="return checkPassword();">
+           Click here to submit the password and view the website
+        </a>
+    </div>
+    
+    <script>
+        function checkPassword(){
+            var pass = document.getElementById('passwordBox');
+            var passEntered = pass.value;
+
+            if(passEntered == 'solo5156'){
+                return true;
+            }
+            else{
+                alert('Access denied! Incorrect password.');
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
